@@ -1,36 +1,45 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<nav class="navbar navbar-expand-lg navbar-dark glass-navbar fixed-top">
   <div class="container">
-    <a class="navbar-brand" href="{{ '/' | relative_url }}">Your Business</a>
 
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav">
+    <!-- Brand -->
+    <a class="navbar-brand fw-bold d-flex align-items-center gap-2" href="{{ '/' | relative_url }}">
+      <i class="bi bi-building"></i>
+      393 Enterprise
+    </a>
+
+    <!-- Mobile toggle -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
       <span class="navbar-toggler-icon"></span>
     </button>
 
-    <div class="collapse navbar-collapse" id="nav">
-      <ul class="navbar-nav ms-auto">
+    <!-- Links -->
+    <div class="collapse navbar-collapse" id="navMenu">
+
+      <ul class="navbar-nav ms-auto gap-2">
 
         <li class="nav-item">
           <a class="nav-link {% if page.url == '/' %}active{% endif %}" 
              href="{{ '/' | relative_url }}">
-             Home
+            Home
           </a>
         </li>
 
         <li class="nav-item">
-          <a class="nav-link {% if page.url == '/about.html' %}active{% endif %}" 
+          <a class="nav-link {% if page.url contains 'about' %}active{% endif %}" 
              href="{{ '/about.html' | relative_url }}">
-             About
+            About
           </a>
         </li>
 
         <li class="nav-item">
-          <a class="nav-link {% if page.url == '/contact.html' %}active{% endif %}" 
+          <a class="nav-link {% if page.url contains 'contact' %}active{% endif %}" 
              href="{{ '/contact.html' | relative_url }}">
-             Contact
+            Contact
           </a>
         </li>
 
       </ul>
     </div>
+
   </div>
 </nav>
