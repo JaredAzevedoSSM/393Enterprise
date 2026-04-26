@@ -1,45 +1,48 @@
-<nav class="navbar navbar-expand-lg navbar-dark glass-navbar fixed-top">
-  <div class="container">
+<nav class="navbar navbar-expand-lg navbar-dark glass-navbar fixed-top px-4">
+  <!-- Brand -->
+  <a class="navbar-brand fw-bold d-flex align-items-center gap-2" href="{{ '/' | relative_url }}">
+    <img src="{{ '/assets/images/logo_retro.PNG' | relative_url }}" alt="Logo" width="30" height="30" class="d-inline-block align-text-top">
+    393 Enterprise
+  </a>
 
-    <!-- Brand -->
-    <a class="navbar-brand fw-bold d-flex align-items-center gap-2" href="{{ '/' | relative_url }}">
-      <i class="bi bi-building"></i>
-      393 Enterprise
-    </a>
+  <!-- Mobile toggle -->
+  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+    <span class="navbar-toggler-icon"></span>
+  </button>
 
-    <!-- Mobile toggle -->
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+  <!-- Links -->
+  <div class="collapse navbar-collapse" id="navMenu">
 
-    <!-- Links -->
-    <div class="collapse navbar-collapse" id="navMenu">
+    <ul class="navbar-nav ms-auto gap-2">
 
-      <ul class="navbar-nav ms-auto gap-2">
+      <li class="nav-item">
+        <a class="nav-link {% if page.url == '/' %}active{% endif %}" 
+            href="{{ '/' | relative_url }}">
+          Home
+        </a>
+      </li>
 
-        <li class="nav-item">
-          <a class="nav-link {% if page.url == '/' %}active{% endif %}" 
-             href="{{ '/' | relative_url }}">
-            Home
-          </a>
-        </li>
+      <li class="nav-item">
+        <a class="nav-link {% if page.url contains 'about' %}active{% endif %}" 
+            href="{{ '/products.html' | relative_url }}">
+          Products
+        </a>
+      </li>
 
-        <li class="nav-item">
-          <a class="nav-link {% if page.url contains 'about' %}active{% endif %}" 
-             href="{{ '/about.html' | relative_url }}">
-            About
-          </a>
-        </li>
+      <li class="nav-item">
+        <a class="nav-link {% if page.url contains 'about' %}active{% endif %}" 
+            href="{{ '/about.html' | relative_url }}">
+          About
+        </a>
+      </li>
 
-        <li class="nav-item">
-          <a class="nav-link {% if page.url contains 'contact' %}active{% endif %}" 
-             href="{{ '/contact.html' | relative_url }}">
-            Contact
-          </a>
-        </li>
+      <li class="nav-item">
+        <a class="nav-link {% if page.url contains 'contact' %}active{% endif %}" 
+            href="{{ '/contact.html' | relative_url }}">
+          Contact
+        </a>
+      </li>
 
-      </ul>
-    </div>
-
+    </ul>
   </div>
 </nav>

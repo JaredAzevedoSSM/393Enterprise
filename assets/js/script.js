@@ -1,1 +1,23 @@
-console.log("Site loaded");
+(() => {
+  'use strict';
+
+  // Wait until DOM is fully loaded
+  document.addEventListener('DOMContentLoaded', () => {
+
+    const forms = document.querySelectorAll('.needs-validation');
+
+    forms.forEach(form => {
+      form.addEventListener('submit', event => {
+
+        if (!form.checkValidity()) {
+          event.preventDefault();
+          event.stopPropagation();
+        }
+
+        form.classList.add('was-validated');
+      });
+    });
+
+  });
+
+})();

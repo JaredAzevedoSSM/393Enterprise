@@ -22,55 +22,163 @@
 </head>
 <body>
 
-  <nav class="navbar navbar-expand-lg navbar-dark glass-navbar fixed-top">
-  <div class="container">
+  <nav class="navbar navbar-expand-lg navbar-dark glass-navbar fixed-top px-4">
+  <!-- Brand -->
+  <a class="navbar-brand fw-bold d-flex align-items-center gap-2" href="/">
+    <img src="/assets/images/logo_retro.PNG" alt="Logo" width="30" height="30" class="d-inline-block align-text-top">
+    393 Enterprise
+  </a>
 
-    <!-- Brand -->
-    <a class="navbar-brand fw-bold d-flex align-items-center gap-2" href="/">
-      <i class="bi bi-building"></i>
-      393 Enterprise
-    </a>
+  <!-- Mobile toggle -->
+  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+    <span class="navbar-toggler-icon"></span>
+  </button>
 
-    <!-- Mobile toggle -->
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+  <!-- Links -->
+  <div class="collapse navbar-collapse" id="navMenu">
 
-    <!-- Links -->
-    <div class="collapse navbar-collapse" id="navMenu">
+    <ul class="navbar-nav ms-auto gap-2">
 
-      <ul class="navbar-nav ms-auto gap-2">
+      <li class="nav-item">
+        <a class="nav-link " 
+            href="/">
+          Home
+        </a>
+      </li>
 
-        <li class="nav-item">
-          <a class="nav-link " 
-             href="/">
-            Home
-          </a>
-        </li>
+      <li class="nav-item">
+        <a class="nav-link " 
+            href="/products.html">
+          Products
+        </a>
+      </li>
 
-        <li class="nav-item">
-          <a class="nav-link " 
-             href="/about.html">
-            About
-          </a>
-        </li>
+      <li class="nav-item">
+        <a class="nav-link " 
+            href="/about.html">
+          About
+        </a>
+      </li>
 
-        <li class="nav-item">
-          <a class="nav-link active" 
-             href="/contact.html">
-            Contact
-          </a>
-        </li>
+      <li class="nav-item">
+        <a class="nav-link active" 
+            href="/contact.html">
+          Contact
+        </a>
+      </li>
 
-      </ul>
-    </div>
-
+    </ul>
   </div>
 </nav>
 
-  <main class="container my-5">
-    <h1>Contact</h1>
-<p>Email: your@email.com</p>
+  <main class="container">
+    <section class="py-5">
+  <div class="container py-5">
+
+    <div class="text-center mb-5">
+      <h1 class="fw-bold">Contact Us</h1>
+      <p class="text-muted">
+        Have a question or want to work together? Send us a message.
+      </p>
+    </div>
+
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+
+        <div class="card shadow-sm border-0">
+          <div class="card-body p-4 p-md-5">
+
+            <form 
+              class="needs-validation" 
+              novalidate
+              action="https://formspree.io/f/xdayjqrd" 
+              method="POST"
+            >
+
+              <!-- Name -->
+              <div class="mb-3">
+                <label class="form-label">
+                  <i class="bi bi-person"></i> Name
+                </label>
+                <input 
+                  type="text" 
+                  name="name" 
+                  class="form-control" 
+                  required
+                >
+                <div class="invalid-feedback">
+                  Please enter your name.
+                </div>
+              </div>
+
+              <!-- Email -->
+              <div class="mb-3">
+                <label class="form-label">
+                  <i class="bi bi-envelope"></i> Email
+                </label>
+                <input 
+                  type="email" 
+                  name="email" 
+                  class="form-control" 
+                  required
+                >
+                <div class="invalid-feedback">
+                  Please enter a valid email address.
+                </div>
+              </div>
+
+              <!-- Subject -->
+              <div class="mb-3">
+                <label class="form-label">
+                  <i class="bi bi-chat-dots"></i> Subject
+                </label>
+                <input 
+                  type="text" 
+                  name="subject" 
+                  class="form-control"
+                  required
+                >
+                <div class="invalid-feedback">
+                  Please enter a subject.
+                </div>
+              </div>
+
+              <!-- Message -->
+              <div class="mb-4">
+                <label class="form-label">
+                  <i class="bi bi-pencil-square"></i> Message
+                </label>
+                <textarea 
+                  name="message" 
+                  rows="5" 
+                  class="form-control" 
+                  required
+                ></textarea>
+                <div class="invalid-feedback">
+                  Please enter a message.
+                </div>
+              </div>
+
+              <!-- Hidden -->
+              <input type="hidden" name="_subject" value="New message from 393Enterprise.com">
+
+              <!-- Submit -->
+              <div class="d-grid">
+                <button type="submit" class="btn btn-primary btn-lg">
+                  <i class="bi bi-send"></i> Send Message
+                </button>
+              </div>
+
+            </form>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</section>
   </main>
 
   <footer class="bg-light text-center py-4 mt-auto border-top">

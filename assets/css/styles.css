@@ -1,6 +1,40 @@
-h1 {
-  font-weight: 600;
+/* ===== Custom Theme Colors ===== */
+:root {
+  --bs-primary: #d83333;
+  --bs-primary-rgb: 216, 51, 51;
+
+  --bs-dark: #250303;
+  --bs-dark-rgb: 37, 3, 3;
+
+  --bs-body-color: #3b0707;
+  --bs-body-bg: #ffffff;
+
+  --bs-link-color: #d83333;
+  --bs-link-hover-color: #e5655d;
 }
+
+.btn-primary {
+  --bs-btn-bg: #0d2e99;
+  --bs-btn-border-color: #0d2e99;
+
+  --bs-btn-hover-bg: #4e70bb;
+  --bs-btn-hover-border-color: #4e70bb;
+
+  --bs-btn-active-bg: #4e70bb;
+  --bs-btn-active-border-color: #4e70bb;
+}
+
+.btn-outline-secondary {
+  --bs-btn-bg: #ffffff;
+  --bs-btn-border-color: #250303;
+
+  --bs-btn-hover-bg: #3b0707;
+  --bs-btn-hover-border-color: #250303;
+
+  --bs-btn-active-bg: #3b0707;
+  --bs-btn-active-border-color: #250303;
+}
+
 /* Sticky glass navbar */
 .glass-navbar {
   background: rgba(20, 20, 20, 0.8);
